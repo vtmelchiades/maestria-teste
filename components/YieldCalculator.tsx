@@ -241,7 +241,7 @@ export default function YieldCalculator({
           className="mt-4 inline-block rounded bg-accent-50 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-accent-700"
           role="status"
         >
-          Superfície fora da ficha técnica — consulte o time técnico
+          Superfície fora da ficha técnica, consulte o time técnico
         </p>
       )}
 

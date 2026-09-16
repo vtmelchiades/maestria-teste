@@ -37,7 +37,11 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.subline}
         </span>
         <span className="absolute right-3 top-3 rounded bg-primary-950/80 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-white backdrop-blur">
-          {product.base === "agua" ? "Base água" : "Base solvente"}
+          {product.base === "agua"
+            ? "Base água"
+            : product.base === "solvente"
+              ? "Base solvente"
+              : "Bicomponente"}
         </span>
       </div>
 

@@ -27,7 +27,7 @@ const FERRAMENTAS = [
 
 function Logo() {
   return (
-    <Link href="/" className="flex flex-col leading-none" aria-label="Maestria — página inicial">
+    <Link href="/" className="flex flex-col leading-none" aria-label="Maestria, página inicial">
       <span className="font-display text-lg font-extrabold tracking-tight text-text-primary">
         MAESTRIA
       </span>

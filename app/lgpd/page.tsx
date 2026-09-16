@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Conformidade LGPD",
   description:
-    "Política de privacidade e tratamento de dados pessoais — Maestria Tintas e Sistemas.",
+    "Política de privacidade e tratamento de dados pessoais da Maestria Tintas e Sistemas.",
 };
 
 export default function LgpdPage() {
@@ -22,9 +22,10 @@ export default function LgpdPage() {
             1. Controladora
           </h2>
           <p className="mt-3">
-            Maestria Tintas e Sistemas LTDA, CNPJ 12.345.678/0001-00, Av.
-            Industrial, 1500 — Distrito 5, Sorocaba/SP. Encarregado de dados
-            (DPO): dpo@tintasmaestria.com.br.
+            Maestria Tintas e Sistemas LTDA, CNPJ 12.345.678/0001-00, Rua
+            José Pinelli, 1135, Distrito Industrial II, Bauru/SP, com
+            showroom em Ribeirão Preto/SP. Encarregado de dados (DPO):
+            dpo@tintasmaestria.com.br.
           </p>
         </section>
 
@@ -35,14 +36,14 @@ export default function LgpdPage() {
           <ul className="mt-3 list-disc space-y-2 pl-5">
             <li>
               Contato (nome, telefone/WhatsApp, e-mail, empresa, CNPJ quando
-              fornecido) — para responder orçamentos e cotações B2B.
+              fornecido) para responder orçamentos e cotações B2B.
             </li>
             <li>
-              Conteúdo da conversa de WhatsApp iniciada por você — para
+              Conteúdo da conversa de WhatsApp iniciada por você, para
               atendimento comercial.
             </li>
             <li>
-              Navegação agregada e anônima (métricas de uso) — para melhoria
+              Navegação agregada e anônima (métricas de uso) para melhoria
               do site, mediante consentimento.
             </li>
           </ul>
