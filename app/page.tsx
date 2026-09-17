@@ -2,9 +2,11 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
+  BadgeCheck,
   ShieldCheck,
+  Sun,
   Timer,
-  Truck,
+  Trophy,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import TactileFinishViewer from "@/components/TactileFinishViewer";
@@ -85,15 +87,16 @@ export default function HomePage() {
 
         <div className="relative mx-auto w-full max-w-[1200px] px-6 pb-16 pt-36 sm:px-8">
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary-300">
-            Tintas &amp; Sistemas — desde 2009
+            Maestria Tintas e Sistemas · Savoir-faire francês
           </p>
           <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl">
-            A precisão de um laboratório.{" "}
-            <span className="text-primary-300">A cor de uma obra.</span>
+            A tecnologia que faz a diferença.{" "}
+            <span className="text-primary-300">Pintar é a arte de proteger.</span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-200 sm:text-lg">
-            Catálogo técnico com cálculo de rendimento em segundos, fichas
-            BT/FISPQ em um clique e a cor exata para a sua superfície.
+            Tintas Formula, revestimentos Crepi, demarcação Stadium, proteção
+            Julien, pisos Sols e sinalização Axion. Da fábrica em Bauru para
+            a sua obra, com padrão europeu.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -113,10 +116,10 @@ export default function HomePage() {
 
           <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 font-mono text-white sm:grid-cols-4">
             {[
-              ["06", "linhas de produto"],
-              ["40+", "SKUs técnicos"],
-              ["15", "anos de ateliê"],
-              ["20+", "países atendidos"],
+              ["07", "linhas de produto"],
+              ["274", "produtos e sistemas"],
+              ["+7 mil", "m² de fábrica em Bauru"],
+              ["168", "cores Phénix Façade"],
             ].map(([n, label]) => (
               <div key={label} className="bg-primary-950/40 p-4 backdrop-blur-sm">
                 <dt className="order-2 text-[10px] uppercase tracking-[0.16em] text-slate-300">
@@ -134,9 +137,9 @@ export default function HomePage() {
       {/* ============================ LINHAS ============================ */}
       <section id="linhas" className="mx-auto max-w-[1200px] scroll-mt-24 px-6 py-20 sm:px-8 sm:py-24">
         <SectionHeader
-          index="01 — Catálogo"
-          titulo="Seis linhas, um padrão."
-          sub="Cada linha segue o mesmo rigor de ficha técnica: rendimento, secagem, diluição e documentos para download."
+          index="01 · Catálogo"
+          titulo="Cada superfície, uma especialidade."
+          sub="Escolha pela aplicação e receba ficha técnica, rendimento e documentos. Qualidade profissional com excelência francesa."
         />
 
         <div className="grid gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 sm:grid-cols-2 xl:grid-cols-3">
@@ -213,9 +216,9 @@ export default function HomePage() {
       <section id="destaques" className="scroll-mt-24 bg-surface-alt py-20 sm:py-24">
         <div className="mx-auto max-w-[1200px] px-6 sm:px-8">
           <SectionHeader
-            index="02 — Destaques técnicos"
-            titulo="O catálogo em primeiro plano."
-            sub="Cards com dados de ficha: base, acabamento, litragens e preço — antes de você clicar."
+            index="02 · Destaques técnicos"
+            titulo="Provado em ficha, não em promessa."
+            sub="Base, acabamento, rendimento e litragens no card. BT e FISPQ em um clique, sem cadastro."
           />
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {produtos.map((p) => (
@@ -230,21 +233,20 @@ export default function HomePage() {
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div className="lg:sticky lg:top-24">
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-400">
-              03 — Simulador tátil
+              03 · Acabamentos
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
-              Toque a parede.
+              Fosco, acetinado ou semibrilho.
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-text-secondary">
-              A mesma superfície, o mesmo tom — três físicos de luz. Mova o
-              cursor e observe como cada acabamento reflete: absorção,
-              difusão aveludada ou ponto especular.
+              A mesma superfície, o mesmo tom, três leituras de luz. Mova o
+              cursor e veja como cada acabamento responde.
             </p>
             <ul className="mt-8 space-y-3 border-l border-slate-200 pl-5">
               {[
-                ["Fosco", "absorção suave — esconde imperfeições"],
-                ["Acetinado", "difusão profunda — leitura de cor fiel"],
-                ["Semibrilho", "especular nítido — acentua textura"],
+                ["Fosco", "aveludado, disfarça imperfeições"],
+                ["Acetinado", "toque suave, fácil de limpar"],
+                ["Semibrilho", "brilho elegante, super lavável"],
               ].map(([k, v]) => (
                 <li key={k} className="flex gap-3 text-sm">
                   <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-primary-700">
@@ -268,12 +270,98 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-[1200px] px-6 sm:px-8">
           <SectionHeader
             escuro
-            index="04 — Console de cálculo"
-            titulo="Quanto o seu projeto consome?"
-            sub="Área, demãos e o rendimento real da ficha técnica. O volume e as embalagens saem na hora."
+            index="04 · Rendimento"
+            titulo="Quanta tinta a sua obra precisa?"
+            sub="Área, demãos e o rendimento da ficha técnica. Volume e embalagens na hora, com 10% de perda inclusa."
           />
           <div className="max-w-4xl">
             <YieldCalculator produtos={produtos} compact tema="escuro" />
+          </div>
+        </div>
+      </section>
+
+      {/* ======================= PROVA E TECNOLOGIA ======================= */}
+      <section id="prova" className="mx-auto max-w-[1200px] scroll-mt-24 px-6 py-20 sm:px-8 sm:py-24">
+        <SectionHeader
+          index="05 · Prova e tecnologia"
+          titulo="A tinta oficial dos grandes estádios."
+          sub="Quem pinta o Morumbi pinta a sua obra. Tecnologia desenvolvida na França, aplicada no Brasil."
+        />
+        <div className="grid gap-px overflow-hidden rounded-lg border border-slate-200 bg-slate-200 md:grid-cols-3">
+          <article className="bg-surface-bg p-8">
+            <Trophy className="size-6 text-primary-700" aria-hidden="true" />
+            <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-text-primary">
+              Tinta oficial do Morumbi
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+              A Maestria desenvolveu a tecnologia que pinta o gramado sem
+              agredir a grama e as cadeiras das arquibancadas do São Paulo
+              FC. Stadium Plus, com visibilidade para o VAR.
+            </p>
+          </article>
+          <article className="bg-surface-bg p-8">
+            <Sun className="size-6 text-primary-700" aria-hidden="true" />
+            <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-text-primary">
+              Phénix Façade, 168 cores
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+              Sistema de cores de alta tecnologia para fachadas, com índice
+              TSR de reflexão solar. Menos calor na parede, menos fissuras
+              no substrato. Norma francesa NF DTU 59.1.
+            </p>
+          </article>
+          <article className="bg-surface-bg p-8">
+            <BadgeCheck className="size-6 text-primary-700" aria-hidden="true" />
+            <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-text-primary">
+              Desempenho comprovado
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+              Formulação conforme ABNT NBR 11702 e NBR 15079, com linhas
+              Premium classificadas. Proteção Julien com sistemas
+              certificados ACQPA. Prova antes de promessa.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* ============================== FAQ ============================== */}
+      <section id="faq" className="scroll-mt-24 bg-surface-alt py-20 sm:py-24">
+        <div className="mx-auto max-w-3xl px-6 sm:px-8">
+          <SectionHeader
+            index="06 · Perguntas frequentes"
+            titulo="Antes de pintar, confira."
+          />
+          <div className="space-y-3">
+            {[
+              [
+                "Quanta tinta preciso para a minha obra?",
+                "Use o simulador de rendimento com a área em m². O cálculo usa o rendimento da ficha técnica de cada produto, com 10% de perda inclusa, e sugere as embalagens.",
+              ],
+              [
+                "Qual a diferença entre fosco, acetinado e semibrilho?",
+                "Fosco é aveludado e disfarça imperfeições. Acetinado tem toque suave e limpa fácil. Semibrilho tem brilho elegante e alta lavabilidade para áreas de limpeza frequente.",
+              ],
+              [
+                "Vocês atendem revendas e construtoras no atacado?",
+                "Sim. O canal B2B atende revendas, construtoras e indústrias com cotação de atacado, representação comercial e assistência técnica. Resposta em até 1 dia útil.",
+              ],
+              [
+                "Como obtenho o boletim técnico e a FISPQ?",
+                "Na página de cada produto, em download imediato e sem cadastro. Para aplicação e segurança, consulte sempre a ficha vigente do produto.",
+              ],
+            ].map(([q, a]) => (
+              <details
+                key={q}
+                className="group rounded-lg border border-slate-200 bg-surface-bg px-6 py-4"
+              >
+                <summary className="cursor-pointer list-none font-display text-base font-semibold text-text-primary">
+                  {q}
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+                  {a}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
@@ -283,21 +371,21 @@ export default function HomePage() {
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-400">
-              05 — Canal B2B
+              07 · Canal B2B
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
-              Atacado, representação e assistência técnica.
+              Revenda, construtora ou indústria.
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-text-secondary">
-              Revendas, construtoras e industriais com condições comerciais,
-              amostras e suporte de formulação — do orçamento à entrega em
-              obra.
+              Cotação de atacado, representação comercial e assistência
+              técnica de formulação. Um parceiro técnico do orçamento à
+              entrega em obra.
             </p>
             <ul className="mt-8 space-y-3">
               {[
                 [Timer, "Resposta comercial em até 1 dia útil"],
-                [Truck, "Logística para todo o Brasil e exportação"],
                 [ShieldCheck, "Assistência técnica de formulação inclusa"],
+                [BadgeCheck, "Fábrica em Bauru SP, showroom em Ribeirão Preto"],
               ].map(([Icon, label]) => {
                 const Ico = Icon as typeof Timer;
                 return (

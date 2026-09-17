@@ -185,7 +185,7 @@ export default function ProductConfigurator({
         </div>
 
         <h2 className="mt-4 font-display text-2xl font-bold tracking-tight text-text-primary">
-          Configuração
+          Acabamento, cor e litragem
         </h2>
 
         {/* Acabamento */}
@@ -344,7 +344,7 @@ export default function ProductConfigurator({
             </li>
           </ul>
           <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.14em] text-slate-400">
-            Download imediato — sem cadastro
+            Download imediato, sem cadastro
           </p>
         </div>
 

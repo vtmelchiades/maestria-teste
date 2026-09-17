@@ -1,6 +1,6 @@
 export type Subline = "FORMULA" | "JULIEN" | "SOLS" | "AXION" | "CREPI";
 
-export type Base = "agua" | "solvente";
+export type Base = "agua" | "solvente" | "bicomponente";
 
 export type Finish = "fosco" | "acetinado" | "semibrilho" | "brilhante";
 

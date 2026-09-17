@@ -36,7 +36,7 @@ const FINISHES: FinishDef[] = [
     classe: "luz-semibrilho",
     reflexo: "PONTO ESPECULAR NÍTIDO",
     descricao:
-      "Ponto especular definido. Acentua textura e profundidade — leitura de ateliê.",
+      "Ponto especular definido. Acentua textura e profundidade.",
   },
 ];
 

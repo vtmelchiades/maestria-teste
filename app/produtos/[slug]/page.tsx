@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = products.find((p) => p.slug === slug);
   if (!product) return { title: "Produto não encontrado" };
   return {
-    title: product.metaTitle,
+    title: { absolute: product.metaTitle },
     description: product.metaDescription,
     openGraph: {
       title: product.metaTitle,
@@ -36,7 +36,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const BASE_LABEL: Record<string, string> = {
   agua: "Base água",
   solvente: "Base solvente",
+  bicomponente: "Bicomponente",
 };
+
+/** Exibe horas fracionadas curtas em minutos (ex.: 0,5 h vira 30 min). */
+function formatarTempo(horas: number): string {
+  if (horas < 1) {
+    const minutos = Math.round(horas * 60);
+    return `${minutos} min`;
+  }
+  return `${horas.toLocaleString("pt-BR")} h`;
+}
 
 export default async function PdpPage({ params }: Props) {
   const { slug } = await params;
@@ -57,9 +67,9 @@ export default async function PdpPage({ params }: Props) {
     ],
     ["Demãos recomendadas", String(product.demaoPadrao)],
     ["Diluição", product.diluir],
-    ["Secagem — ao toque", `${product.secagem.aoToqueH} h`],
-    ["Secagem — entre demãos", `${product.secagem.entreDemaoH} h`],
-    ["Secagem — total", `${product.secagem.totalH} h`],
+    ["Secagem ao toque", formatarTempo(product.secagem.aoToqueH)],
+    ["Secagem entre demãos", formatarTempo(product.secagem.entreDemaoH)],
+    ["Secagem total", formatarTempo(product.secagem.totalH)],
     ["Litragens", product.formats.map((f) => f.size).join(" · ")],
   ];
 
@@ -112,17 +122,17 @@ export default async function PdpPage({ params }: Props) {
         <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.14em] text-slate-400 tabular-nums">
           SKU {product.sku} · Rendimento{" "}
           {product.consumoM2PorLDemao.toLocaleString("pt-BR")} m²/L/demão ·
-          Secagem ao toque {product.secagem.aoToqueH} h
+          Secagem ao toque {formatarTempo(product.secagem.aoToqueH)}
         </p>
       </header>
 
       {/* Configuração + galeria */}
       <ProductConfigurator product={product} colors={cores} />
 
-      {/* Especificações técnicas — estilo suíço/industrial */}
+      {/* Especificações técnicas */}
       <section id="especificacoes" className="mt-20 scroll-mt-24">
         <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-400">
-          01 — Especificação técnica
+          01 · Especificação técnica
         </p>
         <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-text-primary sm:text-3xl">
           Ficha técnica
@@ -154,7 +164,7 @@ export default async function PdpPage({ params }: Props) {
       {/* Modo de aplicação */}
       <section className="mt-16">
         <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-400">
-          02 — Modo de aplicação
+          02 · Modo de aplicação
         </p>
         <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-text-primary sm:text-3xl">
           Do preparo à entrega
@@ -176,7 +186,7 @@ export default async function PdpPage({ params }: Props) {
       {/* Calculadora inline pré-alimentada */}
       <section className="mt-16">
         <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-slate-400">
-          03 — Simulador
+          03 · Simulador
         </p>
         <h2 className="mt-3 font-display text-2xl font-bold tracking-tight text-text-primary sm:text-3xl">
           Dimensione o volume

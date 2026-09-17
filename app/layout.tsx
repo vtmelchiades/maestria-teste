@@ -8,18 +8,18 @@ import { urlWhatsApp, mensagemOrcamento } from "@/lib/conversion";
 export const metadata: Metadata = {
   metadataBase: new URL("https://tintasmaestria.com.br"),
   title: {
-    default: "Maestria — Tintas e Sistemas | Catálogo técnico",
+    default: "Maestria Tintas e Sistemas | A tecnologia que faz a diferença",
     template: "%s | Maestria",
   },
   description:
-    "Tintas decorativas, industriais, anticorrosivas e de demarcação. Cálculo de rendimento em segundos, fichas BT/FISPQ em um clique e a cor exata para a sua superfície.",
+    "Tintas Formula, revestimentos Crepi, demarcação Stadium, proteção Julien, pisos Sols e sinalização Axion. Savoir-faire francês, fábrica em Bauru SP. Pintar é a arte de proteger.",
   openGraph: {
-    title: "Maestria — Tintas e Sistemas",
+    title: "Maestria Tintas e Sistemas",
     description:
-      "Catálogo técnico de tintas com simulador de rendimento, cartela de cores e canal B2B.",
+      "A tecnologia que faz a diferença. Catálogo técnico com simulador de rendimento, BT e FISPQ em um clique.",
     type: "website",
     locale: "pt_BR",
-    siteName: "Maestria — Tintas e Sistemas",
+    siteName: "Maestria Tintas e Sistemas",
   },
 };
 
@@ -37,8 +37,8 @@ function Footer() {
               Tintas &amp; Sistemas
             </p>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-slate-300">
-              Laboratório de cor e engenharia de superfície para obra,
-              indústria e demarcação.
+              A tecnologia que faz a diferença. Savoir-faire francês
+              aplicado à obra brasileira.
             </p>
           </div>
 
@@ -105,8 +105,8 @@ function Footer() {
               Contato
             </p>
             <address className="mt-4 space-y-2.5 text-sm not-italic text-slate-300">
-              <p>Av. Industrial, 1500 — Distrito 5</p>
-              <p>Sorocaba/SP · 18030-000</p>
+              <p>Rua José Pinelli, 1135, Distrito Industrial II</p>
+              <p>Bauru SP · Showroom em Ribeirão Preto</p>
               <p>+55 14 99835-1483</p>
               <p>comercial@tintasmaestria.com.br</p>
             </address>
